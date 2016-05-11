@@ -41,12 +41,10 @@ if [ "$TAIGA_SSL" = "True" ]; then
   echo "Enabling SSL support!"
   sed -i "s/http:\/\//https:\/\//g" /taiga/conf.json
   sed -i "s/ws:\/\//wss:\/\//g" /taiga/conf.json
-  mv /etc/nginx/ssl.conf /etc/nginx/conf.d/default.conf
 fi
 
 # Start nginx service (need to start it as background process)
 # nginx -g "daemon off;"
-service nginx start
 
 # Start Taiga backend Django server
 exec "$@"
