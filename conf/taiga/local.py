@@ -10,6 +10,6 @@
 
 from .docker import *
 
-PUBLIC_REGISTER_ENABLED = True
-DEBUG = False
-TEMPLATE_DEBUG = False
+PUBLIC_REGISTER_ENABLED = False
+DEBUG = True
+TEMPLATE_DEBUG = True
